@@ -21,7 +21,7 @@ function WeatherCitySelector({
   onCityChange: (c: string) => void;
 }) {
     return (
-                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                              
     );
 
 }
