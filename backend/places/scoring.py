@@ -1,17 +1,9 @@
-"""
-Rule-Based Weighted Scoring Engine
-===================================
-Explainable, deterministic recommendation logic for hackathon demo.
-
-Scoring Factors & Weights:
-- Mood Match: 35% (primary=100%, secondary=70%, tertiary=50%, quaternary=30%)
-- Budget Fit: 25% (within range = 100%, close = partial)
-- Time Fit: 20% (matches available time)
-- Weather Match: 15% (sunny/cloudy/rainy preference)
-- Rating Bonus: 5% (quality factor)
-
-Total Score = weighted sum normalized to 0-100
-"""
+# how the rating is calculated:
+# Mood (35%) 
+# Budget (25%) 
+# Time (20%) 
+# Weather (15%)
+# Rating (5%)
 
 from typing import List, Dict, Any
 from dataclasses import dataclass
@@ -19,11 +11,11 @@ from dataclasses import dataclass
 
 @dataclass
 class UserPreferences:
-    """User input preferences for recommendation."""
+#    user preferences
     mood: str
-    budget: int  # NPR
-    time_available: float  # hours
-    weather_preference: str  # 'sunny', 'cloudy', 'rainy', 'any'
+    budget: int 
+    time_available: float
+    weather_preference: str  
     city: str = 'kathmandu'
 
 
@@ -60,10 +52,10 @@ class RecommendationEngine:
         pass
     
     def calculate_mood_score(self, place, user_mood: str) -> tuple[float, str]:
-        """
-        Calculate mood match score.
-        Primary mood = 100%, Secondary = 70%, Tertiary = 50%, Quaternary = 30%
-        """
+     
+        # Calculate mood matching score.
+        # Primary mood = 100%, Secondary = 70%, Tertiary = 50%, Quaternary = 30%
+       
         if place.primary_mood == user_mood:
             return 100.0, f"Perfect for {user_mood} mood"
         elif place.secondary_mood == user_mood:

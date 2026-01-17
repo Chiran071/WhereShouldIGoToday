@@ -186,10 +186,10 @@ export default function Home() {
       <header className="relative bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 text-white overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 text-8xl">🏔️</div>
-          <div className="absolute top-20 right-20 text-6xl">🌸</div>
-          <div className="absolute bottom-10 left-1/4 text-7xl">🛕</div>
-          <div className="absolute bottom-20 right-10 text-5xl">🪷</div>
+          <div className="absolute top-10 left-10 text-8xl"></div>
+          <div className="absolute top-20 right-20 text-6xl"></div>
+          <div className="absolute bottom-10 left-1/4 text-7xl"></div>
+          <div className="absolute bottom-20 right-10 text-5xl"></div>
         </div>
         
         <div className="relative max-w-6xl mx-auto px-4 py-12 sm:py-16 text-center">
